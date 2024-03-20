@@ -9,15 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class GithubAPIController {
     private final GithubAPIService githubAPIService = new GithubAPIService();
 
-    @GetMapping("/github/{name}")
-    public String printGithubProfile(@PathVariable("name") String name) {
+    @GetMapping("/commit/{name}")
+    public String getCommitInfoByName(@PathVariable("name") String name) {
         System.out.println(name);
-        String repo = "spring-roomescape-playground";
+        String repo = "spring-roomescape-playground";   // repo 이름을 수정하여 넣을 것
 
-        return printCommitInfo(name, repo);
-    }
-
-    private String printCommitInfo(String owner, String repo) {
-        return githubAPIService.getCommits(owner, repo);
+        return githubAPIService.getCommits(name, repo);
     }
 }
