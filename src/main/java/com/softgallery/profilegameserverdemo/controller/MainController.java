@@ -2,12 +2,13 @@ package com.softgallery.profilegameserverdemo.controller;
 
 import com.softgallery.profilegameserverdemo.domain.Profile;
 import com.softgallery.profilegameserverdemo.service.ProfileService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class MainController {
     private final ProfileService profileService = new ProfileService();
 
