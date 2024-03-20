@@ -17,6 +17,12 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+
+	// basic spring web package dependency
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// dependency for dynamic webpage
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
